@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VÉRTICE | Cultura, Estilo e Movimento</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="framework/css/bootstrap.min.css">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <a class="navbar-brand brand-mark" href="#destaques" aria-label="VÉRTICE - início">
+                    <span class="brand-seal">V</span>
+                    <span class="brand-name">VÉRTICE</span>
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal"
+                        aria-expanded="false"
+                        aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destaques">Destaques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#noticias">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#curador">O Curador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- =================================================
+             ATIVIDADE 4 — CAROUSEL
+        ================================================== -->
+        <section id="destaques" class="hero-section">
+
+            <div id="carouselVertice"
+                 class="carousel slide"
+                 data-bs-ride="carousel"
+                 data-bs-interval="5500">
+
+                <div class="carousel-indicators">
+                    <button type="button"
+                            data-bs-target="#carouselVertice"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"></button>
+
+                    <button type="button"
+                            data-bs-target="#carouselVertice"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                    <button type="button"
+                            data-bs-target="#carouselVertice"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="img/show-rock.jpg"
+                             class="d-block w-100"
+                             alt="Show de música diante do público">
+
+                        <div class="carousel-caption">
+                            <span class="eyebrow">Música</span>
+                            <h1>Onde a cultura encontra o movimento.</h1>
+                            <p>
+                                Música, esporte, estilo e experiências
+                                que definem novos caminhos.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-outline-light"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#materiaMusica">
+                                Ler matéria →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/ciclismo-mtb.jpg"
+                             class="d-block w-100"
+                             alt="Ciclista percorrendo uma trilha">
+
+                        <div class="carousel-caption">
+                            <span class="eyebrow">Esportes</span>
+                            <h2>Além dos limites.</h2>
+                            <p>
+                                Histórias de quem transforma movimento
+                                em experiência.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-outline-light"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#materiaEsportes">
+                                Ler matéria →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/surf.jpg"
+                             class="d-block w-100"
+                             alt="Surfista em uma onda">
+
+                        <div class="carousel-caption">
+                            <span class="eyebrow">Lifestyle</span>
+                            <h2>Estilo de vida.</h2>
+                            <p>
+                                Lugares, pessoas e experiências
+                                que inspiram.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-outline-light"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#materiaLifestyle">
+                                Ler matéria →
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselVertice"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselVertice"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             MODAIS — MATÉRIAS DO CAROUSEL
+        ================================================== -->
+
+        <div class="modal fade" id="materiaMusica" tabindex="-1"
+             aria-labelledby="materiaMusicaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="materiaMusicaLabel">Além do palco</h2>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/show-rock.jpg"
+                             class="img-fluid article-image"
+                             alt="Show de rock">
+                        <span class="article-category">Música</span>
+                        <p>
+                            Festivais transformam música em experiências
+                            que ultrapassam os limites do palco.
+                        </p>
+                        <p>
+                            O encontro entre artistas e público cria uma
+                            atmosfera própria, onde música, identidade e
+                            comportamento se encontram.
+                        </p>
+                        <p>
+                            Do rock ao metal, da música eletrônica aos
+                            grandes festivais, cada experiência deixa sua
+                            própria marca.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="materiaEsportes" tabindex="-1"
+             aria-labelledby="materiaEsportesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="materiaEsportesLabel">Estrada aberta</h2>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/ciclismo-mtb.jpg"
+                             class="img-fluid article-image"
+                             alt="Ciclista percorrendo uma trilha">
+                        <span class="article-category">Esportes</span>
+                        <p>
+                            Resistência, estratégia e quilômetros definem
+                            a experiência sobre duas rodas.
+                        </p>
+                        <p>
+                            Do asfalto às trilhas, o ciclismo combina
+                            preparação, técnica e capacidade de adaptação.
+                        </p>
+                        <p>
+                            Mais do que velocidade, cada percurso representa
+                            uma nova oportunidade de superar limites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="materiaLifestyle" tabindex="-1"
+             aria-labelledby="materiaLifestyleLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="materiaLifestyleLabel">Estilo de vida</h2>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/surf.jpg"
+                             class="img-fluid article-image"
+                             alt="Surfista em uma onda">
+                        <span class="article-category">Lifestyle</span>
+                        <p>
+                            Lugares, pessoas e experiências podem transformar
+                            a maneira como percebemos o cotidiano.
+                        </p>
+                        <p>
+                            Do café aos rituais de grooming, das viagens às
+                            experiências ao ar livre, estilo também está nos detalhes.
+                        </p>
+                        <p>
+                            O VÉRTICE acompanha essas experiências e procura
+                            histórias que inspirem novas perspectivas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =================================================
+             ATIVIDADE 2 — NOTÍCIAS COM ABAS
+        ================================================== -->
+        <section id="noticias" class="container section-space">
+
+            <div class="section-heading">
+                <span>01</span>
+                <h2>Notícias &amp; histórias</h2>
+                <p>
+                    Um olhar editorial sobre cultura, esporte e estilo de vida.
+                </p>
+            </div>
+
+            <ul class="nav nav-tabs vertice-tabs" id="noticiasTabs" role="tablist">
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active"
+                            id="musica-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#musica"
+                            type="button"
+                            role="tab"
+                            aria-controls="musica"
+                            aria-selected="true">
+                        Música
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link"
+                            id="esportes-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#esportes"
+                            type="button"
+                            role="tab"
+                            aria-controls="esportes"
+                            aria-selected="false">
+                        Esportes
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link"
+                            id="lifestyle-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#lifestyle"
+                            type="button"
+                            role="tab"
+                            aria-controls="lifestyle"
+                            aria-selected="false">
+                        Lifestyle
+                    </button>
+                </li>
+
+            </ul>
+
+            <div class="tab-content pt-4" id="noticiasTabsContent">
+
+                <!-- MÚSICA -->
+                <div class="tab-pane fade show active"
+                     id="musica"
+                     role="tabpanel"
+                     aria-labelledby="musica-tab">
+
+                    <div class="row g-4">
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/dj_backstage.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/dj_backstage.jpg"
+                                     class="img-fluid"
+                                     alt="Festival de música eletrônica">
+                            </a>
+                            <h3>Além do palco</h3>
+                            <p>
+                                Festivais transformam música em experiências
+                                que ultrapassam os limites do palco.
+                            </p>
+                        </article>
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/festival_vibe.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/festival_vibe.jpg"
+                                     class="img-fluid"
+                                     alt="Show de rock">
+                            </a>
+                            <h3>O retorno da energia ao vivo</h3>
+                            <p>
+                                O encontro entre artistas e público continua
+                                sendo uma das grandes forças da música.
+                            </p>
+                        </article>
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/casal _punk.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/casal _punk.jpg"
+                                     class="img-fluid"
+                                     alt="Público em festival">
+                            </a>
+                            <h3>Cultura em movimento</h3>
+                            <p>
+                                Música, comportamento e identidade se encontram
+                                nos grandes festivais.
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ESPORTES -->
+                <div class="tab-pane fade"
+                     id="esportes"
+                     role="tabpanel"
+                     aria-labelledby="esportes-tab">
+
+                    <div class="row g-4">
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/speed_pelotão.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/speed_pelotão.jpg"
+                                     class="img-fluid"
+                                     alt="Ciclistas em uma estrada">
+                            </a>
+                            <h3>Estrada aberta</h3>
+                            <p>
+                                Resistência, estratégia e quilômetros definem
+                                a experiência sobre duas rodas.
+                            </p>
+                        </article>
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/skate_ladeira.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/skate_ladeira.jpg"
+                                     class="img-fluid"
+                                     alt="Skatista em ambiente urbano">
+                            </a>
+                            <h3>A cidade como pista</h3>
+                            <p>
+                                O skate transforma arquitetura urbana em
+                                território de criatividade.
+                            </p>
+                        </article>
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/surf_lipe.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/surf_lipe.jpg"
+                                     class="img-fluid"
+                                     alt="Surfista em uma onda">
+                            </a>
+                            <h3>Entre mar e movimento</h3>
+                            <p>
+                                Técnica, leitura do oceano e conexão com a natureza.
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- LIFESTYLE -->
+                <div class="tab-pane fade"
+                     id="lifestyle"
+                     role="tabpanel"
+                     aria-labelledby="lifestyle-tab">
+
+                    <div class="row g-4">
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/barista_espresso.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/barista_espresso.jpg"
+                                     class="img-fluid"
+                                     alt="Preparo de café">
+                            </a>
+                            <h3>A pausa perfeita</h3>
+                            <p>
+                                Café também é ritual, técnica e experiência.
+                            </p>
+                        </article>
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/hair_cut.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/hair_cut.jpg"
+                                     class="img-fluid"
+                                     alt="Ambiente de barbearia">
+                            </a>
+                            <h3>O ritual masculino</h3>
+                            <p>
+                                Grooming, estilo e tradição encontram novas
+                                interpretações.
+                            </p>
+                        </article>
+
+                        <article class="col-md-6 col-lg-4 news-card">
+                            <a href="img/prensa_francesa.jpg" target="_blank"
+                               rel="noopener noreferrer" class="image-link">
+                                <img src="img/prensa_francesa.jpg"
+                                     class="img-fluid"
+                                     alt="Café servido à mesa">
+                            </a>
+                            <h3>Detalhes que fazem diferença</h3>
+                            <p>
+                                Pequenos rituais podem transformar momentos
+                                comuns em experiências.
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             ATIVIDADE 3 — GALERIA
+        ================================================== -->
+        <section id="galeria" class="container section-space">
+
+            <div class="section-heading">
+                <span>02</span>
+                <h2>Galeria</h2>
+                <p>Imagens que traduzem o universo VÉRTICE.</p>
+            </div>
+
+            <div class="row g-3 gallery-grid">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="img/speed_sprint.jpg" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="img/speed_sprint.jpg"
+                             class="img-fluid"
+                             alt="Ciclistas em pelotão durante uma prova de estrada">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="img/surf_ride.jpg" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="img/surf_ride.jpg"
+                             class="img-fluid"
+                             alt="Surfistas em uma onda">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="img/skate_manobra.jpg" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="img/skate_manobra.jpg"
+                             class="img-fluid"
+                             alt="Skatista em pista urbana">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="img/barista_espresso.jpg" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="img/barista_espresso.jpg"
+                             class="img-fluid"
+                             alt="Preparo de café">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="img/perfume.jpg" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="img/perfume.jpg"
+                             class="img-fluid"
+                             alt="Produtos de grooming masculino">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="img/dj_front.jpg" target="_blank"
+                       rel="noopener noreferrer">
+                        <img src="img/dj_front.jpg"
+                             class="img-fluid"
+                             alt="Festival de música eletrônica">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             ATIVIDADE 5 — PERFIL
+        ================================================== -->
+        <section id="curador" class="container section-space">
+
+            <div class="section-heading">
+                <span>03</span>
+                <h2>O Curador</h2>
+            </div>
+
+            <div class="card profile-card">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-md-4 profile-photo-column">
+                        <img src="img/curador.jpg"
+                             class="profile-photo"
+                             alt="Retrato do curador do VÉRTICE">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body profile-body">
+                            <span class="profile-role">
+                                Jornalista &amp; Curador
+                            </span>
+
+                            <h3 class="card-title">Alexandre Vértice</h3>
+
+                            <p class="card-text">
+                                Jornalista apaixonado por música, esportes,
+                                café e cultura. Entre festivais, estradas,
+                                ondas e boas conversas, busca histórias que
+                                merecem ser descobertas.
+                            </p>
+
+                            <p class="profile-signature">
+                                Cultura, estilo e movimento.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             ATIVIDADE 1 — FORMULÁRIO
+        ================================================== -->
+        <section id="contato" class="container section-space">
+
+            <div class="section-heading">
+                <span>04</span>
+                <h2>Entre em contato</h2>
+                <p>
+                    Envie uma mensagem para a redação do VÉRTICE.
+                </p>
+            </div>
+
+            <form class="row g-4 needs-validation" novalidate>
+
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text"
+                           class="form-control"
+                           id="nome"
+                           name="nome"
+                           placeholder="Seu nome"
+                           required>
+                    <div class="invalid-feedback">
+                        Informe seu nome.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email"
+                           class="form-control"
+                           id="email"
+                           name="email"
+                           placeholder="seu@email.com"
+                           required>
+                    <div class="invalid-feedback">
+                        Informe um e-mail válido.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <input type="text"
+                           class="form-control"
+                           id="assunto"
+                           name="assunto"
+                           placeholder="Assunto da mensagem"
+                           required>
+                    <div class="invalid-feedback">
+                        Informe o assunto.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control"
+                              id="mensagem"
+                              name="mensagem"
+                              rows="6"
+                              placeholder="Escreva sua mensagem..."
+                              required></textarea>
+                    <div class="invalid-feedback">
+                        Escreva sua mensagem.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">
+                        Enviar mensagem
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <h2>VÉRTICE</h2>
+            <p>Cultura • Estilo • Movimento</p>
+            <p>&copy; 2026 VÉRTICE. Projeto acadêmico.</p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="framework/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Validação do formulário -->
+    <script>
+        (() => {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+
+</body>
+</html>
