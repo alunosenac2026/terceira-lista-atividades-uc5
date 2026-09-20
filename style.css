@@ -1,0 +1,552 @@
+/* =========================================================
+   VÉRTICE — CULTURA, ESTILO E MOVIMENTO
+   CSS personalizado
+========================================================= */
+
+:root {
+    --vertice-dark: #10100f;
+    --vertice-dark-soft: #191816;
+    --vertice-paper: #f2eee5;
+    --vertice-paper-dark: #ddd6c7;
+    --vertice-gold: #b4935a;
+    --vertice-gold-light: #d2b77d;
+    --vertice-text: #272522;
+    --vertice-muted: #716b61;
+    --vertice-white: #f8f6f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--vertice-paper);
+    color: var(--vertice-text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+    background: var(--vertice-dark);
+    border-bottom: 1px solid rgba(180, 147, 90, 0.35);
+}
+
+.navbar {
+    min-height: 82px;
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--vertice-white) !important;
+    text-decoration: none;
+    letter-spacing: 0.16em;
+}
+
+.brand-seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--vertice-gold);
+    border-radius: 50%;
+    color: var(--vertice-gold-light);
+    font-size: 1.15rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.brand-seal::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(180, 147, 90, 0.55);
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.navbar .nav-link {
+    color: rgba(248, 246, 240, 0.78);
+    margin-left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--vertice-gold-light);
+}
+
+.navbar-toggler {
+    border-color: rgba(180, 147, 90, 0.55);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(180, 147, 90, 0.2);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.hero-section {
+    background: var(--vertice-dark);
+}
+
+.hero-section .carousel-item {
+    height: min(76vh, 760px);
+    min-height: 520px;
+}
+
+.hero-section .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.hero-section .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.62),
+        rgba(0, 0, 0, 0.12) 70%
+    );
+    pointer-events: none;
+}
+
+.carousel-caption {
+    z-index: 2;
+    left: 9%;
+    right: auto;
+    bottom: 15%;
+    max-width: 720px;
+    text-align: left;
+}
+
+.eyebrow,
+.article-category,
+.profile-role {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--vertice-gold-light);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.carousel-caption h1,
+.carousel-caption h2 {
+    margin-bottom: 16px;
+    font-size: clamp(2.2rem, 5vw, 4.8rem);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+.carousel-caption p {
+    max-width: 570px;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.05rem;
+}
+
+.carousel-caption .btn {
+    border-radius: 0;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 34px;
+    height: 3px;
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.section-space {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.section-heading {
+    margin-bottom: 38px;
+}
+
+.section-heading > span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--vertice-gold);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--vertice-muted);
+}
+
+
+/* =========================================================
+   ABAS / NOTÍCIAS
+========================================================= */
+
+.vertice-tabs {
+    border-bottom: 1px solid var(--vertice-paper-dark);
+}
+
+.vertice-tabs .nav-link {
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    color: var(--vertice-muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.vertice-tabs .nav-link:hover {
+    color: var(--vertice-text);
+    border-color: transparent;
+}
+
+.vertice-tabs .nav-link.active {
+    background: transparent;
+    color: var(--vertice-text);
+    border-color: var(--vertice-gold);
+}
+
+.news-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.news-card .image-link {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.news-card .image-link:hover img {
+    transform: scale(1.035);
+    opacity: 0.9;
+}
+
+.news-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+.news-card p {
+    margin: 0;
+    color: var(--vertice-muted);
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.gallery-grid a {
+    display: block;
+    overflow: hidden;
+    background: var(--vertice-dark);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-grid a:hover img {
+    transform: scale(1.04);
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   PERFIL DO CURADOR
+========================================================= */
+
+.profile-card {
+    overflow: hidden;
+    border: 1px solid var(--vertice-paper-dark);
+    border-radius: 0;
+    background: #ebe6dc;
+    box-shadow: none;
+}
+
+.profile-photo-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+.profile-photo {
+    display: block;
+    width: 230px;
+    height: 230px;
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 5px solid var(--vertice-paper);
+    outline: 1px solid var(--vertice-gold);
+    outline-offset: 5px;
+}
+
+.profile-body {
+    padding: 50px;
+}
+
+.profile-body h3 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.profile-body .card-text {
+    max-width: 650px;
+    color: var(--vertice-muted);
+}
+
+.profile-signature {
+    margin-top: 25px;
+    color: var(--vertice-gold);
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.form-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.form-control {
+    min-height: 48px;
+    border: 1px solid #c9c0b1;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.form-control:focus {
+    border-color: var(--vertice-gold);
+    box-shadow: 0 0 0 0.15rem rgba(180, 147, 90, 0.18);
+    background: #fff;
+}
+
+textarea.form-control {
+    min-height: 150px;
+}
+
+.btn-primary {
+    border: 1px solid var(--vertice-dark);
+    border-radius: 0;
+    background: var(--vertice-dark);
+    padding: 11px 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    border-color: var(--vertice-gold);
+    background: var(--vertice-gold);
+}
+
+
+/* =========================================================
+   MODAIS
+========================================================= */
+
+.modal-content {
+    border: 0;
+    border-radius: 0;
+    background: var(--vertice-paper);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--vertice-paper-dark);
+}
+
+.modal-title {
+    font-weight: 400;
+}
+
+.modal-body {
+    padding: 28px;
+}
+
+.modal-body p {
+    color: var(--vertice-muted);
+}
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.article-category {
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.site-footer {
+    padding: 55px 0;
+    background: var(--vertice-dark);
+    color: var(--vertice-white);
+}
+
+.site-footer h2 {
+    margin-bottom: 12px;
+    color: var(--vertice-gold-light);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+}
+
+.site-footer p {
+    margin-bottom: 6px;
+    color: rgba(248, 246, 240, 0.65);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar .nav-link {
+        margin-left: 0;
+        padding: 12px 0;
+    }
+
+    .hero-section .carousel-item {
+        height: 650px;
+    }
+
+    .carousel-caption {
+        left: 8%;
+        right: 8%;
+        bottom: 12%;
+    }
+
+    .profile-body {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .hero-section .carousel-item {
+        height: 600px;
+        min-height: 0;
+    }
+
+    .carousel-caption h1,
+    .carousel-caption h2 {
+        font-size: 2.15rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.95rem;
+    }
+
+    .section-space {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .profile-photo-column {
+        padding: 45px 35px 25px;
+    }
+
+    .profile-photo {
+        width: 190px;
+        height: 190px;
+    }
+
+    .profile-body {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .news-card img {
+        height: 230px;
+    }
+
+    .gallery-grid img {
+        height: 250px;
+    }
+}
